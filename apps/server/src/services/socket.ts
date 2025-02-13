@@ -1,12 +1,17 @@
 import { Server } from "socket.io";
 
- 
+  
  
  class  SocketService {
     private _io: Server
     constructor(){
         console.log("Init Socket service...")
-        this._io = new Server()
+        this._io = new Server({
+            cors:{
+                allowedHeaders:["*"],
+                origin:"*"
+            }
+        })
     }
 public initListeners(){
     const io = this.io
