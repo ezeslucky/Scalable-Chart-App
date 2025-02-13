@@ -2,6 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "start": "node dist/index",
     "dev": "tsc-watch --onSuccess \"node dist/index.js\" ",
